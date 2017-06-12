@@ -124,6 +124,9 @@
     <Compile Include="Views\page5.xaml.cs">
       <DependentUpon>page5.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\page7.xaml.cs">
+      <DependentUpon>page7.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Seite6.xaml.cs">
       <DependentUpon>Seite6.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\p.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -193,6 +197,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\page5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\page7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
