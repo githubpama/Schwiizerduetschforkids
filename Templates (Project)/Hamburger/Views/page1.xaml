@@ -5,7 +5,12 @@
     xmlns:local="using:Sample.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Sample.ViewModels" x:Name="ThisPage"
     mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:page1ViewModel x:Name="ViewModel" />
+    </Page.DataContext>
     <Page.Resources>
         <Style x:Key="ImageStyle1" TargetType="Image">
             <Setter Property="Height" Value="50"/>
