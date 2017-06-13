@@ -76,9 +76,9 @@
                    Text="Current Visual State" d:IsHidden="True" />
 
 
-    
-        <Image  Source="ms-appx:///Assets/p.jpg" />
 
-
+        <Image  Source="ms-appx:///Assets/p.jpg" Height="200" RelativePanel.AlignTopWith="parameterResizer"/>
+         
+               
     </RelativePanel>
 </Page>
