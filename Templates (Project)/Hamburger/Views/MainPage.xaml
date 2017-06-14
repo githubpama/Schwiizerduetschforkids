@@ -64,21 +64,26 @@
         <controls:Resizer x:Name="parameterResizer" Margin="16,16,16,0"
                           RelativePanel.AlignLeftWithPanel="True"
                           RelativePanel.Below="pageHeader" d:IsHidden="True">
-        
-            <Button Content="start&#xA;Start" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" d:IsHidden="True"/>
-     
-        </controls:Resizer>
 
+            <Button Content="" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" d:IsHidden="False" Visibility="Collapsed"/>
+
+        </controls:Resizer>
 
         <TextBlock x:Name="stateTextBox" Margin="16,16,0,0"
                    RelativePanel.AlignLeftWith="parameterResizer"
                    RelativePanel.Below="parameterResizer"
                    Text="Current Visual State" d:IsHidden="True" />
+        <GridView HorizontalAlignment="Center"  VerticalAlignment="Stretch" Width="auto" RelativePanel.AlignTopWith="parameterResizer" Margin="49,39,-49,-39"/>
+
+        <Image  Source="ms-appx:///Assets/p.jpg" RelativePanel.AlignTopWith="parameterResizer" Width="auto" Margin="10,178,-10.667,141"/>
+        <Button Content="Login" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="113" Margin="10,194,-59,-189" FontSize="10"/>
+        <PasswordBox HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64" Margin="59,162,-59,-162"/>
+        <TextBox HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" Margin="59,125,-52,-125"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="62" FontSize="9" Margin="10,133,-10.333,-133"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="62" Margin="10,169,-10.667,-169" FontSize="9"/>
+        <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0"/>
 
 
 
-        <Image  Source="ms-appx:///Assets/p.jpg" Height="200" RelativePanel.AlignTopWith="parameterResizer"/>
-         
-               
     </RelativePanel>
 </Page>
