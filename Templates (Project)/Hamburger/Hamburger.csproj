@@ -130,6 +130,9 @@
     <Compile Include="Views\page7.xaml.cs">
       <DependentUpon>page7.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Seite6.xaml.cs">
       <DependentUpon>Seite6.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,9 @@
     </Compile>
     <Compile Include="Views\Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\testpage.xaml.cs">
+      <DependentUpon>testpage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +213,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\RegisterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Seite6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -220,6 +230,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\testpage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sample.Common
+namespace UWPLoginPage.Common
 {
     public class Database
     {
@@ -20,19 +20,24 @@ namespace Sample.Common
             conn = new SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
             //Create Table
             conn.CreateTable<User>();
-
-
         }
         public int Register(User user)
         {
-            return conn.Insert(new User()
+            int code = 1;
+            try
             {
-                UserName = user.UserName,
-                Password = user.Password,
-                Email = user.Email
-
-            });
-
+                conn.Insert(new User()
+                {
+                    UserName = user.UserName,
+                    Password = user.Password,
+                    Email = user.Email
+                });
+            }
+            catch (SQLiteException ex)
+            {
+                code = -1;
+            }
+            return code;
         }
 
         public bool Login(string user, string password)
@@ -43,8 +48,6 @@ namespace Sample.Common
                 return true;
             else
                 return false;
-
         }
-
     }
 }

@@ -123,9 +123,9 @@
                             Grid.Column="1"
                             Content="Register"
                             Margin="8"
-                            Background="Beige"
+                            Background="Aqua"
                             Foreground="White"
-                            HorizontalAlignment="Stretch"/>
+                            HorizontalAlignment="Stretch" Click="btnRegister_Click"/>
 
 
                 </Grid>

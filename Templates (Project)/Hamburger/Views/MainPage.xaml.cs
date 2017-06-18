@@ -4,15 +4,44 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
+using UWPLoginPage;
+using Windows.UI.Popups;
+using UWPLoginPage.Common;
 
 namespace Sample.Views
 {
     public sealed partial class MainPage : Page
     {
+
+        Database db;
         public MainPage()
+
+
         {
             InitializeComponent();
             NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+            db = new Database();
+        }
+
+            private void btnRegister_Click(object sender, RoutedEventArgs e)
+            {
+                Frame.Navigate(typeof(RegisterPage));
+            }
+
+            private async void btnLogin_Click(object sender, RoutedEventArgs e)
+            {
+                if (db.Login(txtUser.Text, txtPassword.Password))
+                {
+                    var message = new MessageDialog("Login success");
+                    await message.ShowAsync();
+                }
+                else
+                {
+                    var message = new MessageDialog("Login failed");
+                    await message.ShowAsync();
+                }
+            }
         }
     }
+}
 }
