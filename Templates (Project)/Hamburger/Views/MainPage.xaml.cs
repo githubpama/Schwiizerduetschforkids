@@ -15,20 +15,20 @@ namespace Sample.Views
 
         Database db;
         public MainPage()
-
-
         {
-            InitializeComponent();
-            NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+            this.InitializeComponent();
             db = new Database();
         }
+          
+        
+        
 
             private void btnRegister_Click(object sender, RoutedEventArgs e)
             {
                 Frame.Navigate(typeof(RegisterPage));
             }
 
-            private async void btnLogin_Click(object sender, RoutedEventArgs e)
+            private async void BtnLogin_Click_1(object sender, RoutedEventArgs e)
             {
                 if (db.Login(txtUser.Text, txtPassword.Password))
                 {
@@ -41,7 +41,7 @@ namespace Sample.Views
                     await message.ShowAsync();
                 }
             }
-        }
+
     }
-}
-}
+    }
+

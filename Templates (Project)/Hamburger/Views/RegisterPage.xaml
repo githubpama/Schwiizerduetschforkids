@@ -12,7 +12,7 @@
     
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#1f3b50">
         <!-- Validation Rules-->
         <Grid.Resources>
             <validation:ValidationRules x:Key="LengthCheck">

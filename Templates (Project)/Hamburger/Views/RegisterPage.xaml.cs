@@ -56,12 +56,13 @@ namespace UWPLoginPage
 
         private async void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-           int code =  db.Register(new Common.User() {
+            int code = db.Register(new Common.User()
+            {
                 UserName = txtUserName.Text.Trim(),
                 Password = txtPassword.Password,
                 Email = txtEmail.Text.Trim()
             });
-            if(code == -1)
+            if (code == -1)
             {
                 var message = new MessageDialog("Register failed");
                 await message.ShowAsync();
